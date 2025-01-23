@@ -334,7 +334,7 @@ section button {
 
     @media screen and (max-width:500px) {
         .navbar-container {
-            width: 96.5vw;
+            width: 98vw;
         }
         .header-txt {
             font-size: 18px;
