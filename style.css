@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+body {
+    color: #fff;
+    background: black;
+    font-family: sans-serif;
+    height: 100%;
+}
+h3 {
+    display: flex;
+    justify-self: center;
+    font-size: 25px;
+    border-bottom: 1px solid pink;
+    width: 30px;
+}
+.header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    color: black;
+}
+.header a {
+    font-size: 18px;
+    color: black;
+}
+.header-txt {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: #ffffff59;
+    border-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+    position: absolute;
+    left: 30%;
+    top: 35%;
+    z-index: 1;
+}
+.header  .wp i {
+    padding: 5px;
+    position: fixed;
+    z-index: 1;
+    bottom: 20px;
+    right: 25px;
+    color: green;
+    font-size: 40px;
+    background-color: #ffffffce;
+    border-radius: 50%;
+}
+.navbar-container {
+    padding: 20px;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 98.9vw;
+    justify-content: space-between;
+    background-color: rgba(255, 192, 203, 0.685);
+}
+.navbar-container .hamburguesa {
+    position: absolute;
+    right: 30px;
+    top: 18px;
+    font-size: 35px;
+    display: none;
+}
+.navbar-container .logo {
+    padding: 5px 0;
+    font-size: 22px;
+}
+.navbar ul {
+    display: flex;
+    gap: 50px;
+    padding: 5px;
+}
+.navbar ul li a {
+    padding: 10px 0;
+    border-bottom: 2px solid #fff;
+}
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.section-content {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 150px;
+}
+.section-title, 
+.footer-title {
+    padding: 50px;
+}
+.section-content img {
+    max-width: 50%;
+    min-width: 50%;
+    border-radius: 10px;
+}
+.main {
+    padding-bottom: 40px;
+}
+section button {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 192, 203, 0.795);
+}
+.uno {
+    margin-top: 30px;
+    position: absolute;
+    right: 25%;
+    border: 1px solid #fff;
+}
+.dos {
+    margin-top: 30px;
+    position: absolute;
+    left: 25%;
+    border: 1px solid #fff;
+}
+.personal-container {
+    padding-top: 80px;
+}
+.personal-container h4 {
+    text-align: center;
+    font-size: 30px;
+}
+.personal-content {
+    padding: 80px 200px;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.personal {
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 192, 203, 0.795);
+    border-radius: 5px;
+    padding: 30px;
+    color: black;
+}
+.personal img {
+    max-height: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+.personal p {
+    padding: 30px;
+    font-size: 17px;
+}
+.footer {
+    background-color: rgb(10, 10, 10);
+}
+.footer-title {
+    border-bottom: 1px solid pink;
+}
+.content-footer {
+    padding: 80px 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #ffffff17;
+}
+.content-footer li a {
+    padding: 8px;
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 1px solid pink;
+}
+.content-footer li a i {
+    padding: 3px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 60px;
+}
+.info-txt {
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+.info-txt h4 span {
+    color: pink;
+}
+.info-txt .mail {
+    padding-top: 30px;
+    font-size: 1.4rem;
+}
+.info-mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+.info-mapa iframe {
+    width: 500px;
+    height: 300px;
+}
+.direction {
+    color: pink;
+    padding-top: 20px;
+}
+.footer-txt {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff17;
+}
+.copyright {
+    background-color: #ffffff17;
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width:991px) {
+        .navbar ul {
+            align-items: center;
+            flex-direction: column;
+            margin-top: 55px;
+            gap: 25px;
+        }
+        .menu {
+            display: none;
+            
+        }
+        .navbar-container {
+            width: 97vw;
+        }
+        .navbar-container .hamburguesa {
+            display: block;
+        }
+        .header-txt {
+            font-size: 20px;
+            left: 25%;
+            top: 40%;
+        }
+        h3 {
+            font-size: 30px;
+            width: 80%;
+            padding-top: 20px;
+        }
+        .section-content {
+            gap: 0;
+            padding: 20px 50px;
+            flex-direction: column;
+        }
+        .section-content img {
+            max-width: 80%;
+            min-width: 80%;
+        }
+        .section-button {
+            padding: 45px;
+        }
+        .section-dos {
+            flex-direction: column-reverse;
+        }
+        .uno {
+            margin-top: 30px;
+            right: 40%;
+        }
+        .dos {
+            margin-top: 30px;
+            left: 40%;
+        }
+        .personal-content {
+            padding: 60px;
+            flex-direction: column;
+        }
+        .personal {
+            padding: 10px;
+            gap: 10px;
+        }
+        .info {
+            flex-direction: column;
+            padding-top: 0;
+            gap: 30px;
+        }
+        .info-txt {
+            font-size: 18px;
+            padding-top: 30px;
+        }
+        .info-txt .mail {
+            padding-top: 10px;
+            font-size: 1.14rem;
+        }
+        .info-mapa iframe {
+            width: 400px;
+            height: 250px;
+        }
+        .content-footer {
+            padding: 35px;
+        }
+        .content-footer li a {
+            border-bottom: none;
+        }
+        .content-footer li {
+            padding: 10px;
+        }
+        .footer-txt {
+            padding: 0;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .navbar-container {
+            width: 96.5vw;
+        }
+        .header-txt {
+            font-size: 18px;
+            left: 17%;
+        }
+        h3 {
+            font-size: 28px;
+            width: 40%;
+            padding-top: 20px;
+        }
+        .personal-container h4 {
+            font-size: 25px;
+        }
+        .personal {
+            flex-direction: column;
+            gap: 0;
+            border-radius: 25px;
+            padding: 15px;
+        }
+        .personal img {
+            max-height: 150px;
+            max-width: 150px;
+            min-height: 150px;
+            min-width: 150px;
+            border: 3px solid #fff;
+            display: flex;
+            align-self: center;
+        }
+        .personal p {
+            padding: 10px;
+            font-size: 17px;
+        }
+        .info-txt {
+            font-size: 17px;
+            padding-top: 30px;
+        }
+        .info-txt .mail {
+            padding-top: 10px;
+            font-size: 1.08rem;
+        }
+        .info-mapa {
+            flex-direction: column-reverse;
+        }
+        .direction {
+            padding-bottom: 10px;
+        }
+        .info-mapa iframe {
+            width: 350px;
+            height: 220px;
+        }
+        .content-footer {
+            padding: 15px;
+            flex-direction: column;
+        }
+        .content-footer li a {
+            font-size: 18px;
+        }
+        .content-footer li a i {
+            border: 2px solid #fff;
+        }
+        .copyright {
+            font-size: 1.1rem;
+        }
+    }
