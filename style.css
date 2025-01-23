@@ -334,7 +334,7 @@ section button {
 
     @media screen and (max-width:500px) {
         .navbar-container {
-            width: 98vw;
+            width: 100vw;
         }
         .header-txt {
             font-size: 18px;
@@ -344,6 +344,9 @@ section button {
             font-size: 28px;
             width: 40%;
             padding-top: 20px;
+        }
+        .section-content {
+            padding: 0px 30px;
         }
         .personal-container h4 {
             font-size: 25px;
@@ -386,7 +389,7 @@ section button {
             height: 220px;
         }
         .content-footer {
-            padding: 15px;
+            padding: 30px 0;
             flex-direction: column;
         }
         .content-footer li a {
