@@ -55,13 +55,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       });
   });
 });
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function () {
-      const elements = document.querySelectorAll(".hidden");
-      elements.forEach(element => {
-          element.classList.remove("hidden");
-          element.classList.add("visible");
-      });
-  });
-});
