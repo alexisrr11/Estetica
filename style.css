@@ -242,6 +242,30 @@ section button {
     padding-bottom: 15px;
     font-size: 1.2rem;
 }
+.bxs-up-arrow-alt {
+    padding: 5px;
+    position: fixed;
+    bottom: 5px;
+    left: 10px;
+    font-size: 45px;
+    color: palevioletred;
+    z-index: 1;
+}
+.hidden {
+    opacity: 0;
+    transform: translateX(150px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+.hidden2 {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: opacity 1.5s, transform 1.5s;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 @media screen and (max-width:991px) {
         .navbar ul {
@@ -334,7 +358,7 @@ section button {
 
     @media screen and (max-width:500px) {
         .navbar-container {
-            width: 100vw;
+            width: 96.5vw;
         }
         .header-txt {
             font-size: 18px;
@@ -389,7 +413,7 @@ section button {
             height: 220px;
         }
         .content-footer {
-            padding: 30px 0;
+            padding: 15px;
             flex-direction: column;
         }
         .content-footer li a {
