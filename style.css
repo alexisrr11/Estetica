@@ -358,14 +358,13 @@ section button {
 
     @media screen and (max-width:500px) {
         .navbar-container {
-            width: 96.5vw;
+            width: 100vw;
         }
         .header-txt {
             font-size: 18px;
             left: 17%;
         }
         h3 {
-            font-size: 28px;
             width: 40%;
             padding-top: 20px;
         }
@@ -413,7 +412,7 @@ section button {
             height: 220px;
         }
         .content-footer {
-            padding: 15px;
+            padding: 25px 0;
             flex-direction: column;
         }
         .content-footer li a {
