@@ -253,12 +253,7 @@ section button {
 }
 .hidden {
     opacity: 0;
-    transform: translateX(150px);
-    transition: opacity 1.5s, transform 1.5s;
-}
-.hidden2 {
-    opacity: 0;
-    transform: translateX(-150px);
+    transform: translateY(50px);
     transition: opacity 1.5s, transform 1.5s;
 }
 
