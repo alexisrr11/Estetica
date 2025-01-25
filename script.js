@@ -1,29 +1,67 @@
-function toggleText(buttonId, contentId, className) {
-    let button = document.getElementById(buttonId);
-    let content = document.getElementById(contentId);
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
 
-    button.addEventListener("click", () => {
-        content.classList.toggle(className);
-    });
-
-    content.addEventListener("click", () => {
-        content.classList.remove(className);
-    });
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+    }
+  });
 }
 
-toggleText("hideText_btn", "hideText", "show");
-toggleText("hideText_btn1", "hideText1", "show1");
-toggleText("hideText_btn2", "hideText2", "show2");
+function autoSlide() {
+  currentIndex = (currentIndex < slides.length - 1) ? currentIndex + 1 : 0;
+  showSlide(currentIndex);
+}
 
+// Start the automatic slider
+setInterval(autoSlide, 5000); // Change slide every 5 seconds
+
+const contenidoNav = document.querySelector(".navbar");
+const icon = document.querySelector(".hamburguesa");
+
+contenidoNav.classList.add("menu");
+
+icon.addEventListener('click',()=>{
+  contenidoNav.classList.toggle("menu")
+})
+
+// Nueva funcionalidad
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".section");
+
+  const observar = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observar.unobserve(entry.target);
+          }
+      });
+  });
+
+  elements.forEach(element => observar.observe(element));
+});
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-  
-        const target = document.querySelector(this.getAttribute("href"));
-        target.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
+  anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute("href"));
+      target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+      });
   });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function () {
+      const elements = document.querySelectorAll(".hidden");
+      elements.forEach(element => {
+          element.classList.remove("hidden");
+          element.classList.add("visible");
+      });
+  });
+});
